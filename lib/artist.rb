@@ -9,9 +9,9 @@ class Artist
   end
 
   def add_song(song)
-    self.songs << song    #Artist.songs reader returns all songs 
-                          #stored in @songs
+    self.songs << song
   end
+                         
 
   def save
     @@all << self
