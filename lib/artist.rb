@@ -1,4 +1,3 @@
-require 'pry'
 class Artist
   attr_accessor :name, :songs
   @@all = []
@@ -23,7 +22,6 @@ class Artist
   end
   
   def self.find_or_create_by_name(name)
-    binding.pry
     if self.find(name)
       self.find(name)
     else
@@ -37,7 +35,6 @@ class Artist
 
   def self.create(name)
     artist = Artist.new(name)
-    artist.save
     artist
   end
 
