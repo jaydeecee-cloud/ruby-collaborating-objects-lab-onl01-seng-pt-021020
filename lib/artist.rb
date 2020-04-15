@@ -1,6 +1,5 @@
 class Artist
   attr_accessor :name, :songs
-  
   @@all = []
 
   def initialize(name)
@@ -14,6 +13,10 @@ class Artist
 
   def self.all
     @@all
+  end
+  
+  def save
+    self.class.all << self
   end
 
   def self.find_or_create_by_name(name)
